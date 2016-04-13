@@ -90,8 +90,7 @@
   alias ed="$EMACS_LAUNCHER --daemon"
   alias ek="emacsclient -e '(kill-emacs)'"
   alias ec="emacsclient -a ''"
-# alias matlab13a='/usr/local/MATLAB/R2013a/bin/matlab'
-# alias matlab15a='/usr/local/MATLAB/R2015a/bin/matlab'
-# alias matlab15b='/usr/local/MATLAB/R2015b/bin/matlab'
+  alias matlab13a='/usr/local/MATLAB/R2013a/bin/matlab'
+  alias matlab15b='/usr/local/MATLAB/R2015b/bin/matlab'
 # alias cli="canopy_cli"
 # alias cli-install='enpkg'
