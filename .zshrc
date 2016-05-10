@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/dlwang/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,13 +53,16 @@
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-  plugins=(git colored-man colorize command-not-found emacs history
+  plugins=(brew git colored-man colorize command-not-found emacs history
            history-substring-search rsync sudo)
 
 #----------------------------------------------------------------------------
-# Source
+# Source 0H-MY-ZSHELL
   source $ZSH/oh-my-zsh.sh
-  source activate delin
+# Source ANACONDA if exist
+  if [[ -d "$HOME/anaconda2/bin" ]] ; then
+      source activate delin
+  fi
 
 #----------------------------------------------------------------------------
 # You may need to manually set your language environment
