@@ -63,6 +63,10 @@
   if [[ -d "$HOME/anaconda2/bin" ]] ; then
       source activate delin
   fi
+# Source CANOPY ENTHOUGHT if exist
+  if [[ -d "$HOME/Enthought/Canopy_64bit/User" ]] ; then
+      VIRTUAL_ENV_DISABLE_PROMPT=1 source $HOME/Enthought/Canopy_64bit/User/bin/activate
+  fi
 
 #----------------------------------------------------------------------------
 # You may need to manually set your language environment
@@ -93,7 +97,11 @@
   alias ed="$EMACS_LAUNCHER --daemon"
   alias ek="emacsclient -e '(kill-emacs)'"
   alias ec="emacsclient -a ''"
-  alias matlab13a='/usr/local/MATLAB/R2013a/bin/matlab'
-  alias matlab15b='/usr/local/MATLAB/R2015b/bin/matlab'
+  if [[ -d "/usr/local/MATLAB/R2013a" ]] ; then
+      alias matlab13a='/usr/local/MATLAB/R2013a/bin/matlab'
+  fi
+  if [[ -d "/usr/local/MATLAB/R2015b" ]]; then
+      alias matlab15b='/usr/local/MATLAB/R2015b/bin/matlab'
+  fi
 # alias cli="canopy_cli"
 # alias cli-install='enpkg'

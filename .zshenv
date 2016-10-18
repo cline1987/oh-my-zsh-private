@@ -6,10 +6,12 @@ if [[ -d "$HOME/bin" ]] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# set PATH so it includes anaconda's bin if it exists
+# set PATH so it includes anaconda's bin if it exists (This step must be done to use anaconda)
 if [[ -d "$HOME/anaconda2/bin" ]] ; then
     PATH="$HOME/anaconda2/bin:$PATH"
 fi
+
+# Canopy Enthought doesn't need PATH configuration.
 
 # set MANPATH
 if [[ -n $MANPATH ]] ; then
