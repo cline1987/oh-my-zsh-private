@@ -67,6 +67,10 @@
   if [[ -d "$HOME/Enthought/Canopy_64bit/User" ]] ; then
       VIRTUAL_ENV_DISABLE_PROMPT=1 source $HOME/Enthought/Canopy_64bit/User/bin/activate
   fi
+# Source OAWRS software if exist
+  if [[ -d "/home/Newmaine2006" ]] ; then
+      source /home/Newmaine2006/General_Configuration/setpath.zsh
+  fi
 
 #----------------------------------------------------------------------------
 # You may need to manually set your language environment
