@@ -1,0 +1,40 @@
+#!/bin/bash
+
+ZSHPRIVATE=$HOME/.oh-my-zsh-private
+
+############# TEMP_PATH #############
+TEMP_PATH="$HOME/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+# include anaconda's bin if exists
+if [ -d "$HOME/anaconda2/bin" ]; then
+  TEMP_PATH="$HOME/anaconda2/bin:$TEMP_PATH"
+fi
+
+############ TEMP_MANPATH ############
+if [ -n "$MANPATH" ]; then
+  TEMP_MANPATH="/usr/local/man:$MANPATH"
+else
+  TEMP_MANPATH="/usr/local/man"
+fi
+
+########## TEMP_WORKON_HOME ##########
+TEMP_WORKON_HOME="$HOME/pyEnvs"
+
+
+
+############ Write .zshenv ############
+cat > $HOME/.zshenv <<EOF
+PATH=$TEMP_PATH
+MANPATH=$TEMP_MANPATH
+WORKON_HOME=$TEMP_WORKON_HOME
+EOF
+
+if [ -d "$HOME/Enthought/Canopy_64bit/User" ]; then
+  echo "VIRTUAL_ENV_DISABLE_PROMPT=1 source \$HOME/Enthought/Canopy_64bit/User/bin/activate" >> $HOME/.zshenv
+fi
+
+if [ -d "/home/Newmaine2006" ]; then
+  echo "source /home/Newmaine2006/General_Configuration/setpath.zsh" >> $HOME/.zshenv
+fi
+
+############# Copy .zshrc #############
+cp $ZSHPRIVATE/zshrc $HOME/.zshrc
