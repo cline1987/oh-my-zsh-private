@@ -20,7 +20,6 @@ fi
 TEMP_WORKON_HOME="$HOME/pyEnvs"
 
 
-
 ############ Write .zshenv ############
 cat > $HOME/.zshenv <<EOF
 PATH=$TEMP_PATH
@@ -29,7 +28,7 @@ WORKON_HOME=$TEMP_WORKON_HOME
 EOF
 
 if [ -d "$HOME/Enthought/Canopy_64bit/User" ]; then
-  echo "VIRTUAL_ENV_DISABLE_PROMPT=1 source \$HOME/Enthought/Canopy_64bit/User/bin/activate" >> $HOME/.zshenv
+  echo "VIRTUAL_ENV_DISABLE_PROMPT=1 source $HOME/Enthought/Canopy_64bit/User/bin/activate" >> $HOME/.zshenv
 fi
 
 if [ -d "/home/Newmaine2006" ]; then
