@@ -53,8 +53,7 @@
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-  plugins=(brew git colored-man colorize command-not-found emacs history
-           history-substring-search rsync sudo)
+  plugins=(git colored-man colorize command-not-found history history-substring-search rsync sudo)
 
 #----------------------------------------------------------------------------
 # Source 0H-MY-ZSHELL
