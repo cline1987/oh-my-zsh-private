@@ -84,15 +84,8 @@
 #
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-  alias ee="$EMACS_LAUNCHER"
-  alias ed="$EMACS_LAUNCHER --daemon"
-  alias ek="emacsclient -e '(kill-emacs)'"
+  alias estart="emacs --daemon"
+  alias estop="emacsclient -e '(kill-emacs)'"
   alias ec="emacsclient -a ''"
-  if [[ -d "/usr/local/MATLAB/R2013a" ]] ; then
-    alias matlab13a='/usr/local/MATLAB/R2013a/bin/matlab'
-  fi
-  if [[ -d "/usr/local/MATLAB/R2015b" ]]; then
-    alias matlab15b='/usr/local/MATLAB/R2015b/bin/matlab'
-  fi
 # alias cli="canopy_cli"
 # alias cli-install='enpkg'
